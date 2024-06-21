@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem } from './CartSlice';
+import { addItem } from './CreateSlice';
 import './ProductList.css'; // Import CSS file
 
 import './ProductList.css'; // Import CSS file
-import Cart from './Cart';
+import CartItem from './CartItem';
 import AboutUs from './AboutUs';
 
 function ProductList() {
@@ -315,7 +315,7 @@ function ProductList() {
                 ))}
             </div>
         ) :  (
-            <Cart onContinueShopping={handleContinueShopping}/>
+            <CartItem onContinueShopping={handleContinueShopping}/>
         )}
     </div>
     );
